@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -R /usr/src/app/raven /config
+git clone --recursive https://github.com/RavenLRS/raven.git /config

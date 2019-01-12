@@ -34,11 +34,9 @@ RUN tar -xzf xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz
 RUN rm xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz
 ENV PATH=$PATH:${APPDIR}/xtensa-esp32-elf/bin
 
-# Setup Raven
-WORKDIR ${APPDIR}
-RUN git clone --recursive https://github.com/RavenLRS/raven.git
-# WORKDIR ${APPDIR}/raven
-WORKDIR /config/raven
+# Setup Raven by run setup script
+
+WORKDIR /config
 
 COPY setup /usr/local/bin
 

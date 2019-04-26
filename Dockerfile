@@ -15,7 +15,7 @@ RUN apt-get update && apt install -y \
     python-pip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-VOLUME /config
+VOLUME /home/src
 WORKDIR /usr/src/app
 ENV APPDIR /usr/src/app
 
@@ -36,7 +36,7 @@ ENV PATH=$PATH:${APPDIR}/xtensa-esp32-elf/bin
 
 # Setup Raven by run setup script
 
-WORKDIR /config
+WORKDIR /home/src
 
 COPY setup /usr/local/bin
 

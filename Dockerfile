@@ -35,10 +35,7 @@ RUN rm xtensa-esp32-elf-linux64-1.22.0-80-g6c4433a-5.2.0.tar.gz
 ENV PATH=$PATH:${APPDIR}/xtensa-esp32-elf/bin
 
 # Setup Raven by run setup script
-
 WORKDIR /home/src
-
-COPY setup /usr/local/bin
 
 ENTRYPOINT ["/bin/sh", "-c"]
 CMD ["make", "--help"]

@@ -2,9 +2,12 @@
 
 This is a Docker image for build RavenLRS
 
+## How to use
+
+Download Raven first
 https://github.com/RavenLRS/raven
 
-## How to use
+Run commands in raven's folder
 
  Compile (Upload separately)
 
